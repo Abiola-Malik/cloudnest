@@ -37,6 +37,7 @@ const OtpModal = ({ accountId, email }) => {
       const sessionId = await verifySecret({ accountId, password });
 
       console.log({ sessionId });
+      if (!sessionId) alert('no session');
 
       if (sessionId) router.push('/');
     } catch (error) {
