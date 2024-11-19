@@ -8,7 +8,19 @@ const poppins = Poppins({
 
 export const metadata = {
   title: 'CloudNest',
-  description: 'cloudnest - the only cloud storage you need',
+  description: 'CloudNest - Store, Share and Sync your files',
+  keywords: [
+    'cloud',
+    'nest',
+    'cloudnest',
+    'cloudnest keep',
+    'cloudnest storage',
+    'CloudNest',
+    'CloudNest keep',
+    'CloudNest storage',
+  ],
+  authors: [{ name: 'Abiola Malik', url: 'https://cloudnest.vercel.app' }],
+  creator: 'Abiola Malik',
 };
 
 export default function RootLayout({ children }) {

@@ -18,7 +18,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { createAccount, signInUser } from '@/lib/actions/user.actions';
-import OtpModal from '@/components/OTPModal';
+import OtpModal from '@/components/OtpModal';
 
 const authFormSchema = (type) => {
   return z.object({
@@ -34,22 +34,18 @@ const AuthForm = ({ type }) => {
   const [accountId, setAccountId] = useState(null);
 
   const formSchema = authFormSchema(type);
-  const form =
-    useForm <
-    z.infer <
-    typeof formSchema >>
-      {
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-          fullName: '',
-          email: '',
-        },
-      };
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      fullName: '',
+      email: '',
+    },
+  });
 
   const onSubmit = async (values) => {
     setIsLoading(true);
     setErrorMessage('');
-
+    console.log(values);
     try {
       const user =
         type === 'sign-up'
@@ -58,7 +54,7 @@ const AuthForm = ({ type }) => {
               email: values.email,
             })
           : await signInUser({ email: values.email });
-
+      console.log({ user });
       setAccountId(user.accountId);
     } catch {
       setErrorMessage('Failed to create account. Please try again.');
@@ -81,7 +77,9 @@ const AuthForm = ({ type }) => {
               render={({ field }) => (
                 <FormItem>
                   <div className='shad-form-item'>
-                    <FormLabel className='shad-form-label'>Full Name</FormLabel>
+                    <FormLabel className=' text-light-100 pt-2 body-2 w-full font-bold'>
+                      Full Name
+                    </FormLabel>
 
                     <FormControl>
                       <Input
