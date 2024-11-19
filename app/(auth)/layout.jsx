@@ -8,8 +8,8 @@ const Layout = ({ children }) => {
         <div className='flex max-h-[800px] max-w-[430px] flex-col justify-center space-y-12'>
           <Image
             src={'/assets/icons/logo-full.svg'}
-            height={82}
-            width={224}
+            height={50}
+            width={150}
             alt='storage-logo'
             className='h-auto '
           />

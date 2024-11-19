@@ -1,4 +1,17 @@
-<svg width="83" height="82" viewBox="0 0 83 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect opacity="0.2" width="74.8323" height="74.8323" rx="37.4161" fill="#FA7275"/>
-<rect x="32.7383" y="31.1797" width="49.8882" height="49.8882" rx="24.9441" fill="#FA7275"/>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Cloud Shape -->
+  <g transform="translate(20, 20) scale(2.5)">
+    <path fill="none" 
+          stroke="#0079c1" 
+          stroke-width="3" 
+          stroke-miterlimit="10" 
+          d="M55,50c4.565,0,8-3.435,8-8c0-4.565-3.435-9-8-9
+          c0-11.414-9.586-20-21-20c-10.102,0-19.2,6.423-21,16c0,0-1.165,0-2,0
+          C5.292,29,1,34.292,1,40s4.292,10,10,10H55z"/>
+  </g>
+
+  <!-- Storage Elements -->
+  <rect x="40" y="140" width="120" height="8" rx="4" fill="#0079c1"/>
+  <rect x="40" y="156" width="120" height="8" rx="4" fill="#0079c1"/>
+  <rect x="40" y="172" width="120" height="8" rx="4" fill="#0079c1"/>
 </svg>
