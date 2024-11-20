@@ -66,7 +66,11 @@ const AuthForm = ({ type }) => {
   return (
     <>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className='auth-form'>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className='auth-form'
+          method='POST'
+        >
           <h1 className='form-title'>
             {type === 'sign-in' ? 'Sign In' : 'Sign Up'}
           </h1>
